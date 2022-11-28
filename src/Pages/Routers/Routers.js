@@ -39,7 +39,7 @@ const router = createBrowserRouter([
             },
             {
                 path: "menus/:id",
-                loader: ({ params }) => fetch(`http://localhost:5000/menus/${params.id}`),
+                loader: ({ params }) => fetch(`https://resale-masraful.vercel.app/menus/${params.id}`),
                 element: <Menu></Menu>
             }
 
@@ -64,7 +64,7 @@ const router = createBrowserRouter([
 
             {
                 path: '/dashboard/payment/:id',
-                loader: ({ params }) => fetch(`http://localhost:5000/bookPayment/${params.id}`),
+                loader: ({ params }) => fetch(`https://resale-masraful.vercel.app/bookPayment/${params.id}`),
                 element: <Payment></Payment>
             },
             {

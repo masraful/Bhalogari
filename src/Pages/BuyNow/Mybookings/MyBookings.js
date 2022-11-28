@@ -11,7 +11,7 @@ const MyBookings = () => {
     // console.log(user)
     const [bookings, setBookings] = useState([])
     useEffect(() => {
-        fetch(`http://localhost:5000/bookings?email=${user?.email}`)
+        fetch(`https://resale-masraful.vercel.app/bookings?email=${user?.email}`)
             .then(res => res.json())
             .then(data => {
                 if (loading) {
@@ -25,7 +25,7 @@ const MyBookings = () => {
     }, [user?.email])
     const handleDelete = (id) => {
         console.log(id)
-        fetch(`http://localhost:5000/${id}`, {
+        fetch(`https://resale-masraful.vercel.app/${id}`, {
             method: 'DELETE'
         })
             .then(res => res.json())

@@ -16,7 +16,7 @@ const Menu = ({ selectedDate }) => {
 
 
     useEffect(() => {
-        fetch(`http://localhost:5000/category`)
+        fetch(`https://resale-masraful.vercel.app/category`)
             .then(res => res.json())
             .then(data => setCategory(data))
     }, [])

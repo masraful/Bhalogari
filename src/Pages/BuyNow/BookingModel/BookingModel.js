@@ -26,7 +26,7 @@ const BookingModel = ({ BuyNow, setBuyNow }) => {
             image: img,
         }
         console.log(booking)
-        fetch('http://localhost:5000/bookings', {
+        fetch('https://resale-masraful.vercel.app/bookings', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

@@ -14,14 +14,14 @@ const AllUser = () => {
     // } = useQuery({
     //     queryKey: ["users"],
     //     queryFn: async () => {
-    //         const res = await fetch("http://localhost:5000/allusers");
+    //         const res = await fetch("https://resale-masraful.vercel.app/allusers");
     //         const data = await res.json();
     //         return data;
     //     },
     // });
     const [allUsers, setAllUsers] = useState([])
     useEffect(() => {
-        fetch("http://localhost:5000/allusers")
+        fetch("https://resale-masraful.vercel.app/allusers")
             .then(res => res.json())
             .then(data => setAllUsers(data))
     }, [])
@@ -32,7 +32,7 @@ const AllUser = () => {
             "Are you sure, you want to cancel this order"
         );
         if (proceed) {
-            fetch(`http://localhost:5000/deleteUsers/${id}`, {
+            fetch(`https://resale-masraful.vercel.app/deleteUsers/${id}`, {
                 method: "DELETE",
             })
                 .then((res) => res.json())
@@ -59,7 +59,7 @@ const AllUser = () => {
     const handelUserVerify = (id) => {
         console.log(id);
 
-        fetch(`http://localhost:5000/users/verify/${id}`, {
+        fetch(`https://resale-masraful.vercel.app/users/verify/${id}`, {
             method: "PUT",
         })
             .then((res) => res.json())
