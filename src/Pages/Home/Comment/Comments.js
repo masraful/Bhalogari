@@ -20,6 +20,7 @@ const Comments = () => {
         const userName = form.userName.value;
         const email = form.email.value;
         const massage = form.massage.value;
+        form.reset()
         const comments = {
             userName, email, massage
         }
@@ -41,7 +42,7 @@ const Comments = () => {
 
 
     return (
-        <div className='w-3/4 mx-auto'>
+        <div className='w-3/4 mx-auto mb-5'>
             <div>
                 <div className="text-4xl mb-4 divider">Comment</div>
                 {
